@@ -9,13 +9,25 @@
   </head>
 
   <body>
-
-
-
-
-
-    <!-- <script src='js/guessing-game.js'></script> -->
+    <div class='main'>
+    <h1>Guess the Number!</h1>
+    <div><p class='hidden' id='temp'>temp of guess goes here</p></div>
+    <p id='remaining'>You have 5 guesses remaining...</p>
+    <p><input placeholder="Guess a number" id='textbox'>
+      <input type='submit' id='submit'></p>
+    <p><button type="button" id="restart">Restart!</button>
+      <button type="button" id='hint'>Need A Hint?</button></p>
+      <div><p class='hidden' id='hints'>The secret number is __, __, or __</p></div>
+    <p id='pastGuesses'><strong>Guesses:</strong></p>
+  </div>
+  <script src='js/guessing-game.js'></script>
     <!-- uncomment the script tag above when you are ready to add JavaScript to your document -->
   </body>
-
+  <!--
+  <footer>
+      <p>Created by: Kirsten Lindsmith</p>
+      <p><a href="http://kirstenlindsmith.wordpress.com">
+      kirstenlindsmith.wordpress.com</a>.</p>
+    </footer>
+  THIS IS in the WRONG PLACE so I'll deal with it later-->
 </html>

@@ -1,1 +1,35 @@
-/* Write your CSS code in this file */
+html {
+  font-family: 'Courier New', Courier, monospace;
+  background: #c6ffdd;
+  background: -webkit-linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+  background: linear-gradient(to right,#c6ffdd, #fbd786, #f7797d);
+  /*background-image: url("http://2.bp.blogspot.com/-Eb9OQ0jeGfs/UggeoQrSZkI/AAAAAAAAB5U/xh7cBVuil6w/s1600/fat+cat+tile.jpg")*/
+}
+
+.main {
+  background-color: white;
+  border: 10px solid pink;
+  width: 500px;
+  text-align: center;
+}
+
+.hidden {
+  height: 0px;
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  font-style: italic;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  padding: 200px;
+  background-image: url("https://i.gifer.com/2iiD.gif");
+  background-position: right bottom;
+   background-repeat: no-repeat;
+}
+
+
