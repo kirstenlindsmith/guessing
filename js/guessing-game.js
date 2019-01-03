@@ -109,7 +109,9 @@ submit.addEventListener("click", function(event){
     hintNumbers.classList.remove('visible')
     hintNumbers.classList.add('hidden')
     let remaining = document.getElementById('remaining')
-    game.guessCount--
+    if (!(guessArray.includes(guess))){
+      game.guessCount--
+    }  
     remaining.innerHTML = `You have ${game.guessCount} guesses remaining...`
     let tempRating = document.getElementById('temp')
    tempRating.innerHTML = game.checkGuess()
