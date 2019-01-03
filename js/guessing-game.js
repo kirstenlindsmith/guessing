@@ -47,16 +47,16 @@ class Game {
   checkGuess(){
     if (this.playersGuess === this.winningNumber) {
       return 'You Win!';
+    } 
+    
+    if (this.playersGuess !== this.winningNumber && !(this.pastGuesses.includes(this.playersGuess)) && this.playersGuess!==null && !isNaN(this.playersGuess)) {
+      this.pastGuesses.push(this.playersGuess)
+      //this.playersGuess = null
     }
     
     if (this.pastGuesses.includes(this.playersGuess)) {
       return 'You have already guessed that number.';
-    }  
-    
-    if (this.playersGuess !== this.winningNumber && !(this.pastGuesses.includes(this.playersGuess)) && this.playersGuess!==null) {
-      this.pastGuesses.push(this.playersGuess)
-      this.playersGuess = null
-    }
+    } 
     
     if (this.pastGuesses.length>=5) {
       return 'You Lose.';
@@ -103,13 +103,14 @@ submit.addEventListener("click", function(event){
    console.log('guess:', game.playersGuess)
    console.log('pastGuesses:', game.pastGuesses)
    console.log('winning:', game.winningNumber)
+   console.log(game.difference())
    let guessArray = game.pastGuesses
    pastGuesses.innerHTML = `<strong>Guesses:</strong> ${guessArray.join(" ")}`
    let hintNumbers = document.getElementById('hints')
     hintNumbers.classList.remove('visible')
     hintNumbers.classList.add('hidden')
     let remaining = document.getElementById('remaining')
-    if (!(guessArray.includes(guess))){
+    if (!(guessArray.includes(guess))&&!isNaN(guess)){
       game.guessCount--
     }  
     remaining.innerHTML = `You have ${game.guessCount} guesses remaining...`
