@@ -5,21 +5,28 @@
     <meta charset="UTF-8">
     <title>Guessing Game</title>
     <link rel="stylesheet" href="main.css">
-    <!-- the MAIN.CSS file is linked here -->
+    <!-- the MAIN.CSS file is linked on line 7 -->
   </head>
 
   <body>
     <div class='main'>
     <h1>Guess the Number!</h1>
-    <div><p class='hidden' id='temp'>temp of guess goes here</p></div>
+    <div><p class='hidden' id='temp'></p></div>
     <p id='remaining'>You have 5 guesses remaining...</p>
     <p><input placeholder="Guess a number" id='textbox'>
       <input type='submit' id='submit'></p>
     <p><button type="button" id="restart">Restart!</button>
       <button type="button" id='hint'>Need A Hint?</button></p>
-      <div><p class='hidden' id='hints'>The secret number is __, __, or __</p></div>
+      <div><p class='hidden' id='hints'></p></div>
     <p id='pastGuesses'><strong>Guesses:</strong></p>
   </div>
+  
+  <div id='footer'>
+      <a href="https://www.fullstackacademy.com/">Fullstack Academy</a>
+      <a href="https://github.com/kirstenlindsmith/guessing-game"><i class="fab fa-github"></i>Kirsten Lindsmith</a>
+      <a href="https://www.gracehopper.com/">Grace Hopper Program</a>
+    </div>
+  
   <script src='js/guessing-game.js'></script>
     <!-- uncomment the script tag above when you are ready to add JavaScript to your document -->
   </body>

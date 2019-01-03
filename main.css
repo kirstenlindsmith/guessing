@@ -11,6 +11,8 @@ html {
   border: 10px solid pink;
   width: 500px;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .hidden {
@@ -29,7 +31,16 @@ body {
   padding: 200px;
   background-image: url("https://i.gifer.com/2iiD.gif");
   background-position: right bottom;
-   background-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
 
+#footer {
+  width: 500px;
+  font-size: 11px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px;
+}
 
