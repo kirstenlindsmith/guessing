@@ -1,19 +1,53 @@
 html {
   font-family: 'Courier New', Courier, monospace;
-  background: #B6E7F7;
-background: -webkit-linear-gradient(to right, #668EC8, #B6E7F7);
-background: linear-gradient(to right, #668EC8, #B6E7F7);
-
+  background: url("http://purepng.com/public/uploads/large/purepng.com-white-cloudnaturestylenaturalbeautifulgreen-5415211264555x7ih.png"), linear-gradient(to right, #3A5284, #D7F5FF);
+  background-position: 25% 11%, center;
+  background-repeat: no-repeat;
+  background-size: 675px, 100%;
+  opacity: 1;
 }
 
-.main {
-  background-color: rgba(255, 255, 255, 0.75);
-  border: 10px solid #4876B9;
+body{
+  min-height: 100vh;
+}
+
+
+/* #everything {
+  background: linear-gradient(to right, #3A5284, #D7F5FF);
+} */
+
+.button {
+  color: black;
+}
+
+.text {
+  color: black;
+  /* background-image: linear-gradient(120deg, #00C0FF, #FFCF00, #AF0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  
+  /* text-shadow: 7px 7px 5px white; */
+}
+
+#main {
+  /* background-image: url("http://purepng.com/public/uploads/large/purepng.com-white-cloudnaturestylenaturalbeautifulgreen-5415211264555x7ih.png");
+  background-size: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: visible; */
+  /* background: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%); */
+  /* background-color: rgba(0, 0, 0, 0.50); */
+  /* background: -webkit-linear-gradient(#00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  /* border: 10px solid #4876B9; */
   width: 500px;
   text-align: center;
   justify-content: center;
   align-items: center;
 }
+
+
 
 .hidden {
   height: 0px;
@@ -38,6 +72,11 @@ background: linear-gradient(to right, #668EC8, #B6E7F7);
 
 #box {
   margin: 15%;
+  /* background-image: url("http://purepng.com/public/uploads/large/purepng.com-white-cloudnaturestylenaturalbeautifulgreen-5415211264555x7ih.png");
+  background-size: 100vh;
+  background-position: left;
+  background-repeat: no-repeat;
+  overflow: visible; */
 }
 
 a {
@@ -155,3 +194,4 @@ a:active {
   background-position: right bottom;
   background-repeat: no-repeat;
 }
+
