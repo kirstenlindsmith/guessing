@@ -11,10 +11,6 @@ body {
   min-height: 100vh;
 }
 
-/* #everything {
-  background: linear-gradient(to right, #3A5284, #D7F5FF);
-} */
-
 .button {
   color: black;
 }
@@ -42,27 +38,7 @@ body {
   50% { border-color: #82DAF8; }
 }
 
-.text {
-  color: black;
-  /* background-image: linear-gradient(120deg, #00C0FF, #FFCF00, #AF0000);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
-
-  /* text-shadow: 7px 7px 5px white; */
-}
-
 #main {
-  /* background-image: url("http://purepng.com/public/uploads/large/purepng.com-white-cloudnaturestylenaturalbeautifulgreen-5415211264555x7ih.png");
-  background-size: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: visible; */
-  /* background: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%); */
-  /* background-color: rgba(0, 0, 0, 0.50); */
-  /* background: -webkit-linear-gradient(#00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
-  /* border: 10px solid #4876B9; */
   width: 405px;
   margin: 25px;
   text-align: center;
@@ -93,11 +69,6 @@ body {
 
 #box {
   margin: 15%;
-  /* background-image: url("http://purepng.com/public/uploads/large/purepng.com-white-cloudnaturestylenaturalbeautifulgreen-5415211264555x7ih.png");
-  background-size: 100vh;
-  background-position: left;
-  background-repeat: no-repeat;
-  overflow: visible; */
 }
 
 a {
@@ -119,8 +90,6 @@ a:active {
 .playing {
   min-height: 65vh;
   background-image: url("https://vignette.wikia.nocookie.net/yandere-simulator-fanon/images/3/38/Pusheen.gif/revision/latest?cb=20170323104013");
-  /* background-size: 280px; */
-  /* https://vignette.wikia.nocookie.net/yandere-simulator-fanon/images/3/38/Pusheen.gif/revision/latest?cb=20170323104013 */
   background-position: right bottom;
   background-repeat: no-repeat;
 }
