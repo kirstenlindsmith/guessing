@@ -163,6 +163,9 @@ restart.addEventListener("click", function(event){
   clearGuessDisplay()
   let bawdy = document.getElementById('body')
   bawdy.classList = 'playing'
+  let typeText = document.getElementById('typewriter')
+  let redoType = typeText.cloneNode(true)
+  typeText.parentNode.replaceChild(redoType, typeText)
 });
 
 //HINT BUTTON
