@@ -1,13 +1,14 @@
 html {
   font-family: 'Courier New', Courier, monospace;
-  background: #c6ffdd;
-  background: -webkit-linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
-  background: linear-gradient(to right,#c6ffdd, #fbd786, #f7797d);
+  background: #B6E7F7;
+background: -webkit-linear-gradient(to right, #668EC8, #B6E7F7);
+background: linear-gradient(to right, #668EC8, #B6E7F7);
+
 }
 
 .main {
-  background-color: white;
-  border: 10px solid pink;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 10px solid #4876B9;
   width: 500px;
   text-align: center;
   justify-content: center;
@@ -25,10 +26,11 @@ html {
 }
 
 body {
-  background-image: url("https://i.gifer.com/2iiD.gif");
+  min-height: 65vh;
+  background-image: url("https://vignette.wikia.nocookie.net/yandere-simulator-fanon/images/3/38/Pusheen.gif/revision/latest?cb=20170323104013");
+  /* ("https://i.gifer.com/2iiD.gif"); */
   background-position: right bottom;
   background-repeat: no-repeat;
-  
 }
 
 #footer {
@@ -44,4 +46,3 @@ body {
 #box {
   margin: 15%;
 }
-
