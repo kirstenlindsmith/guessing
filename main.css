@@ -25,21 +25,6 @@ background: linear-gradient(to right, #668EC8, #B6E7F7);
   font-style: italic;
 }
 
-.playing {
-  min-height: 65vh;
-  background-image: url("https://vignette.wikia.nocookie.net/yandere-simulator-fanon/images/3/38/Pusheen.gif/revision/latest?cb=20170323104013");
-  background-position: right bottom;
-  background-repeat: no-repeat;
-}
-
-.won {
-  min-height: 65vh;
-  background-image: url("https://media.giphy.com/media/cC9MHgpD4ZueFUHIN0/giphy.gif");
-  background-size: 280px;
-  background-position: right bottom;
-  background-repeat: no-repeat;
-}
-
 #footer {
   width: 500px;
   font-size: 11px;
@@ -69,4 +54,104 @@ a:hover {
 
 a:active {
   color: #FFBEF5;
+}
+
+.playing {
+  min-height: 65vh;
+  background-image: url("https://vignette.wikia.nocookie.net/yandere-simulator-fanon/images/3/38/Pusheen.gif/revision/latest?cb=20170323104013");
+  /* background-size: 280px; */
+  /* https://vignette.wikia.nocookie.net/yandere-simulator-fanon/images/3/38/Pusheen.gif/revision/latest?cb=20170323104013 */
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.won {
+  min-height: 65vh;
+  background-image: url("https://media.giphy.com/media/cC9MHgpD4ZueFUHIN0/giphy.gif");
+  background-size: 280px;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.one {
+  min-height: 65vh;
+  background-image: url("https://i.gifer.com/2iiD.gif");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.two {
+  min-height: 65vh;
+  background-image: url("https://thumbs.gfycat.com/IncomparableSneakyHyracotherium-max-1mb.gif");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.three {
+  min-height: 65vh;
+  background-image: url("https://thumbs.gfycat.com/WellmadeOddAmericanbobtail-max-1mb.gif");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.four {
+  min-height: 65vh;
+  background-image: url("https://i.pinimg.com/originals/44/dc/9c/44dc9c3abf24f851d23e40e7774ebeec.gif");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.five {
+  min-height: 65vh;
+  background-image: url("https://media.giphy.com/media/xFoV7P0JsHwoZvHXP6/giphy.gif");
+  background-size: 280px;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.six {
+  min-height: 65vh;
+  background-image: url("https://media.giphy.com/media/1rOy2VZy4gmflji5ig/giphy.gif");
+  background-size: 280px;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.seven {
+  min-height: 65vh;
+  background-image: url("https://i.gifer.com/6kX.gif");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.eight {
+  min-height: 65vh;
+  background-image: url("https://media.giphy.com/media/8c14vDYQEMkx6zvLh1/giphy.gif");
+  background-size: 280px;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.nine {
+  min-height: 65vh;
+  background-image: url("https://media.giphy.com/media/1AiIyXakd0nt9YVMhn/giphy.gif");
+  background-size: 280px;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.ten {
+  min-height: 65vh;
+  background-image: url("https://media.giphy.com/media/xkFKeKg75qEVROuHlJ/giphy.gif");
+  background-size: 280px;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.eleven {
+  min-height: 65vh;
+  background-image: url("https://thumbs.gfycat.com/MeaslyNegativeGoldenmantledgroundsquirrel-size_restricted.gif");
+  background-size: 280px;
+  background-position: right bottom;
+  background-repeat: no-repeat;
 }

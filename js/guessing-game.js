@@ -98,6 +98,7 @@ const submit = document.getElementById("submit");
 const textbox = document.getElementById('textbox');
 const restart = document.getElementById('restart');
 const hint = document.getElementById('hint')
+const cat = document.getElementById('cat')
 
 function updateGuessDisplay(){
   let pastGuessText = document.getElementById('pastGuesses')
@@ -161,8 +162,7 @@ restart.addEventListener("click", function(event){
   remaining.innerHTML = `You have ${game.guessCount} guesses remaining...`
   clearGuessDisplay()
   let bawdy = document.getElementById('body')
-  bawdy.classList.remove('won')
-  bawdy.classList.add('playing')
+  bawdy.classList = 'playing'
 });
 
 //HINT BUTTON
@@ -172,4 +172,13 @@ hint.addEventListener("click", function(event){
   hintNumbers.innerHTML = `The secret number is ${hints[0]}, ${hints[1]}, or ${hints[2]}`
   hintNumbers.classList.remove('hidden')
   hintNumbers.classList.add('visible')
+});
+
+//CAT BUTTON
+cat.addEventListener("click", function(event){
+  let cats = ['playing', 'won', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven']
+  let cat = cats[Math.floor(Math.random()*cats.length)];
+  console.log(cat)
+  let bgArea = document.getElementById('body')
+  bgArea.classList = cat
 });
