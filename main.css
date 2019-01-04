@@ -25,11 +25,10 @@ html {
 }
 
 body {
-  justify-content: center;
-  padding: 200px;
   background-image: url("https://i.gifer.com/2iiD.gif");
   background-position: right bottom;
   background-repeat: no-repeat;
+  
 }
 
 #footer {
@@ -40,5 +39,9 @@ body {
   flex-direction: row;
   justify-content: space-between;
   margin: 10px;
+}
+
+#box {
+  margin: 15%;
 }
 

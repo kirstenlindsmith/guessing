@@ -1,13 +1,3 @@
-/* 
-
-Write your guess-game code here! Don't forget to look at the test specs as a guide. You can run the specs
-by running "testem".
-
-In this file, you will also include the event listeners that are needed to interact with your HTML file when
-a user clicks a button or adds a guess to the input field.
-
-*/
-
 function generateWinningNumber(){
   return Math.floor(Math.random() * 100) + 1 
 }
@@ -30,6 +20,7 @@ class Game {
     this.pastGuesses = [];
     this.winningNumber = generateWinningNumber();
     this.guessCount = 5;
+    this.guessDirection = null;
   }
   
   difference(){
@@ -40,40 +31,50 @@ class Game {
     return (this.playersGuess < this.winningNumber)? true : false
   };
   playersGuessSubmission(num){
-    if (num < 1 || num > 100 || typeof num !== 'number') throw 'That is an invalid guess.'
-    this.playersGuess = num;
-    return this.checkGuess()
+    if (num < 1 || num > 100 || typeof num !== 'number' || isNaN(num)) throw 'That is an invalid guess.'
+    this.playersGuess = num
+    return this.checkGuess(num)
   };
-  checkGuess(){
-    if (this.playersGuess === this.winningNumber) {
+  guessLowerOrHigher(num){
+    if (num > this.winningNumber){
+      this.guessDirection = 'lower'
+    }
+    if (num < this.winningNumber){
+      this.guessDirection = 'higher'
+    }
+    return this.guessDirection
+  };
+  checkGuess(guess){
+    //if the guess is correct, the player wins!
+    if (guess === this.winningNumber) {
       return 'You Win!';
     } 
-    
-    if (this.playersGuess !== this.winningNumber && !(this.pastGuesses.includes(this.playersGuess)) && this.playersGuess!==null && !isNaN(this.playersGuess)) {
-      this.pastGuesses.push(this.playersGuess)
-      //this.playersGuess = null
-    }
-    
-    if (this.pastGuesses.includes(this.playersGuess)) {
+    //if the guess has already been submitted...
+    if (this.pastGuesses.includes(guess)) {
       return 'You have already guessed that number.';
     } 
     
+    //if the guess is wrong, but it hasn't been guessed before, add it to the list of past guesses
+    if (guess !== this.winningNumber && !(this.pastGuesses.includes(guess))) {
+    this.pastGuesses.push(guess)
+    }
+    
     if (this.pastGuesses.length>=5) {
-      return 'You Lose.';
+      return `You Lose! The correct number was ${this.winningNumber}.`;
     }
       
     if (this.difference() < 10 ) {
-      return 'You\'re burning up!';
+      return `You're burning up! Go a teensy bit ${game.guessLowerOrHigher(guess)}!`;
     }
       
     if (this.difference() < 25 ) {
-      return 'You\'re lukewarm.';
+      return `You're lukewarm. Try going ${game.guessLowerOrHigher(guess)}`;
     }  
     if (this.difference() < 50 ) {
-      return 'You\'re a bit chilly.';
+      return `You're a bit chilly. Guess ${game.guessLowerOrHigher(guess)}`;
     }
     if (this.difference() < 100 ) {
-      return 'You\'re ice cold!';
+      return `You're ice cold! Go ${game.guessLowerOrHigher(guess)}`;
     }
   }; 
   provideHint(){
@@ -95,32 +96,55 @@ const textbox = document.getElementById('textbox');
 const restart = document.getElementById('restart');
 const hint = document.getElementById('hint')
 
+function updateGuessDisplay(){
+  let pastGuessText = document.getElementById('pastGuesses')
+  let guessArray = game.pastGuesses
+  pastGuessText.innerHTML = `<strong>Guesses:</strong> ${guessArray.join(" ")}`
+}
+
+function clearGuessDisplay(){
+  let pastGuessText = document.getElementById('pastGuesses')
+  pastGuessText.innerHTML = `<strong>Guesses:</strong>`
+}
+
+function clearHints(){
+  let hintNumbers = document.getElementById('hints')
+  hintNumbers.classList.remove('visible')
+  hintNumbers.classList.add('hidden')
+}
+
+function updateGuessCount(){
+  let remaining = document.getElementById('remaining')
+  game.guessCount = 5-(game.pastGuesses.length)
+  remaining.innerHTML = `You have ${game.guessCount} guesses remaining...`
+}
+
+function updateTextResponse(){
+  let guess = parseInt(textbox.value)
+  let responseText = document.getElementById('temp')
+  //console.log(game)
+  responseText.innerHTML = game.playersGuessSubmission(guess)
+  responseText.classList.remove('hidden')
+  responseText.classList.add('visible')
+}
+
+//SUBMIT BUTTON
 submit.addEventListener("click", function(event){
-   let guess = parseInt(textbox.value)
-   game.playersGuessSubmission(guess)
-   textbox.value = ""
-   let pastGuesses = document.getElementById('pastGuesses')
-   console.log('guess:', game.playersGuess)
-   console.log('pastGuesses:', game.pastGuesses)
-   console.log('winning:', game.winningNumber)
-   console.log(game.difference())
-   let guessArray = game.pastGuesses
-   pastGuesses.innerHTML = `<strong>Guesses:</strong> ${guessArray.join(" ")}`
-   let hintNumbers = document.getElementById('hints')
-    hintNumbers.classList.remove('visible')
-    hintNumbers.classList.add('hidden')
-    let remaining = document.getElementById('remaining')
-    if (!(guessArray.includes(guess))&&!isNaN(guess)){
-      game.guessCount--
-    }  
-    remaining.innerHTML = `You have ${game.guessCount} guesses remaining...`
-    let tempRating = document.getElementById('temp')
-   tempRating.innerHTML = game.checkGuess()
-   tempRating.classList.remove('hidden')
-   tempRating.classList.add('visible')
-   
+    
+   clearHints();
+   updateTextResponse()
+   updateGuessCount();
+   updateGuessDisplay();
+  
+  textbox.value = ""
+  
+  console.log('guess:', game.playersGuess)
+  console.log('pastGuesses:', game.pastGuesses)
+  console.log('winning:', game.winningNumber)
+  console.log('difference:', game.difference())
 });
 
+//RESTART BUTTON
 restart.addEventListener("click", function(event){
   game = newGame()
   let hintNumbers = document.getElementById('hints')
@@ -132,8 +156,10 @@ restart.addEventListener("click", function(event){
   game.guessCount = 5
   let remaining = document.getElementById('remaining')
   remaining.innerHTML = `You have ${game.guessCount} guesses remaining...`
+  clearGuessDisplay()
 });
 
+//HINT BUTTON
 hint.addEventListener("click", function(event){
   let hints = game.provideHint()
   let hintNumbers = document.getElementById('hints')
