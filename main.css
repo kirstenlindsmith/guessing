@@ -1,16 +1,15 @@
 html {
   font-family: 'Courier New', Courier, monospace;
-  background: url("http://purepng.com/public/uploads/large/purepng.com-white-cloudnaturestylenaturalbeautifulgreen-5415211264555x7ih.png"), linear-gradient(to right, #3A5284, #D7F5FF);
-  background-position: 25% 11%, center;
+  background: url("http://purepng.com/public/uploads/large/purepng.com-white-cloudnaturestylenaturalbeautifulgreen-5415211264555x7ih.png"), url("http://www.pngall.com/wp-content/uploads/2016/03/Cloud-PNG-2.png"), url("http://pngimg.com/uploads/cloud/cloud_PNG11.png"), linear-gradient(to bottom, #3A5284, #D7F5FF);
+  background-position: 25% 11%, 5% -50%, -50% -175%, center;
   background-repeat: no-repeat;
-  background-size: 675px, 100%;
+  background-size: 675px, 100%, 100%, 100%;
   opacity: 1;
 }
 
-body{
+body {
   min-height: 100vh;
 }
-
 
 /* #everything {
   background: linear-gradient(to right, #3A5284, #D7F5FF);
@@ -25,7 +24,7 @@ body{
   /* background-image: linear-gradient(120deg, #00C0FF, #FFCF00, #AF0000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
-  
+
   /* text-shadow: 7px 7px 5px white; */
 }
 
@@ -194,4 +193,3 @@ a:active {
   background-position: right bottom;
   background-repeat: no-repeat;
 }
-
