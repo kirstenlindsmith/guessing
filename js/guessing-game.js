@@ -47,6 +47,9 @@ class Game {
   checkGuess(guess){
     //if the guess is correct, the player wins!
     if (guess === this.winningNumber) {
+      let bawdy = document.getElementById('body')
+      bawdy.classList.remove('playing')
+      bawdy.classList.add('won')
       return 'You Win!';
     } 
     //if the guess has already been submitted...
@@ -157,6 +160,9 @@ restart.addEventListener("click", function(event){
   let remaining = document.getElementById('remaining')
   remaining.innerHTML = `You have ${game.guessCount} guesses remaining...`
   clearGuessDisplay()
+  let bawdy = document.getElementById('body')
+  bawdy.classList.remove('won')
+  bawdy.classList.add('playing')
 });
 
 //HINT BUTTON
