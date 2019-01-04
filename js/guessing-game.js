@@ -182,6 +182,10 @@ cat.addEventListener("click", function(event){
   let cats = ['playing', 'won', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven']
   let cat = cats[Math.floor(Math.random()*cats.length)];
   let bgArea = document.getElementById('body')
+  let prevCat = bgArea.classList
+  while (cat == prevCat){
+    cat = cats[Math.floor(Math.random()*cats.length)];
+  }
   bgArea.classList = cat
 });
 
