@@ -43,6 +43,7 @@ background: linear-gradient(to right, #668EC8, #B6E7F7);
 #footer {
   width: 500px;
   font-size: 11px;
+  color: #DDF6FF;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -52,4 +53,20 @@ background: linear-gradient(to right, #668EC8, #B6E7F7);
 
 #box {
   margin: 15%;
+}
+
+a {
+  color: #DDF6FF;
+}
+
+a:visited {
+  color: #DDF6FF;
+}
+
+a:hover {
+  color: #FFBEF5;
+}
+
+a:active {
+  color: #FFBEF5;
 }
