@@ -178,7 +178,6 @@ hint.addEventListener("click", function(event){
 cat.addEventListener("click", function(event){
   let cats = ['playing', 'won', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven']
   let cat = cats[Math.floor(Math.random()*cats.length)];
-  console.log(cat)
   let bgArea = document.getElementById('body')
   bgArea.classList = cat
 });
